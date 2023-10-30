@@ -22,7 +22,7 @@ if (!empty($jsonParam)) {
     // Prepare the WHERE clause
     $whereClause = ' WHERE ';
     foreach ($jsonParam as $field => $value) {
-        if ($value !== '' && $value !== '0') {
+        if ($value != '' && $value != '0') {
             $whereClause .= "$field = '$value' AND ";
         }
     }
