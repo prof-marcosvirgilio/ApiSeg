@@ -20,7 +20,7 @@ $jsonParam = json_decode(file_get_contents('php://input'), true);
 
 if (!empty($jsonParam)) {
     // Prepare the WHERE clause
-    $whereClause = '';
+    $whereClause = ' WHERE ';
     foreach ($jsonParam as $field => $value) {
         if ($value !== '' && $value !== '0') {
             $whereClause .= "$field = '$value' AND ";
